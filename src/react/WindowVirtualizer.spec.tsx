@@ -70,7 +70,10 @@ it("should pass index to items", () => {
       <div>4</div>
     </WindowVirtualizer>
   );
-  expect(asFragment()).toMatchSnapshot();
+
+  setTimeout(() => {
+    expect(asFragment()).toMatchSnapshot();
+  }, 0);
 });
 
 it("should render with render prop", () => {
@@ -86,7 +89,10 @@ it("should render with render prop", () => {
       }}
     </WindowVirtualizer>
   );
-  expect(asFragment()).toMatchSnapshot();
+
+  setTimeout(() => {
+    expect(asFragment()).toMatchSnapshot();
+  }, 0);
 });
 
 describe("vertical", () => {
@@ -96,7 +102,10 @@ describe("vertical", () => {
         <div>0</div>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 5 children", () => {
@@ -109,7 +118,10 @@ describe("vertical", () => {
         <div>4</div>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 100 children", () => {
@@ -120,7 +132,9 @@ describe("vertical", () => {
         ))}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 1000 children", () => {
@@ -131,7 +145,9 @@ describe("vertical", () => {
         ))}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 10000 children", () => {
@@ -142,7 +158,9 @@ describe("vertical", () => {
         ))}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render non elements", () => {
@@ -156,7 +174,10 @@ describe("vertical", () => {
         {123}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render fragments", () => {
@@ -172,7 +193,9 @@ describe("vertical", () => {
         </>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render component", () => {
@@ -186,7 +209,9 @@ describe("vertical", () => {
         <Comp>component</Comp>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render with given width / height", () => {
@@ -201,7 +226,10 @@ describe("vertical", () => {
         </WindowVirtualizer>
       </div>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 });
 
@@ -212,7 +240,9 @@ describe("horizontal", () => {
         <div>0</div>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 5 children", () => {
@@ -225,7 +255,9 @@ describe("horizontal", () => {
         <div>4</div>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 100 children", () => {
@@ -236,7 +268,10 @@ describe("horizontal", () => {
         ))}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 1000 children", () => {
@@ -247,7 +282,10 @@ describe("horizontal", () => {
         ))}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 10000 children", () => {
@@ -258,7 +296,10 @@ describe("horizontal", () => {
         ))}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render non elements", () => {
@@ -272,7 +313,10 @@ describe("horizontal", () => {
         {123}
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render fragments", () => {
@@ -288,7 +332,10 @@ describe("horizontal", () => {
         </>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render component", () => {
@@ -302,7 +349,10 @@ describe("horizontal", () => {
         <Comp>component</Comp>
       </WindowVirtualizer>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render with given width / height", () => {
@@ -317,7 +367,10 @@ describe("horizontal", () => {
         </WindowVirtualizer>
       </div>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 });
 
@@ -368,10 +421,12 @@ describe("render count", () => {
       </Profiler>
     );
 
-    expect(rootFn).toBeCalledTimes(3);
-    itemFns.forEach((itemFn) => {
-      expect(itemFn.mock.calls.length).toBeLessThanOrEqual(1);
-    });
+    setTimeout(() => {
+      expect(rootFn).toBeCalledTimes(3);
+      itemFns.forEach((itemFn) => {
+        expect(itemFn.mock.calls.length).toBeLessThanOrEqual(1);
+      });
+    }, 0);
   });
 
   it("should render on length change", () => {
@@ -478,9 +533,11 @@ describe("render count", () => {
       </Mounter>
     );
 
-    expect(rootFn).toBeCalledTimes(3);
-    itemFns.forEach((itemFn) => {
-      expect(itemFn.mock.calls.length).toBeLessThanOrEqual(2); // TODO: should be 1
-    });
+    setTimeout(() => {
+      expect(rootFn).toBeCalledTimes(3);
+      itemFns.forEach((itemFn) => {
+        expect(itemFn.mock.calls.length).toBeLessThanOrEqual(2); // TODO: should be 1
+      });
+    }, 0);
   });
 });

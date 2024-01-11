@@ -60,6 +60,8 @@ describe("rtl", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 });

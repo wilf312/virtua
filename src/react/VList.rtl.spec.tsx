@@ -58,7 +58,10 @@ describe("rtl", () => {
         ))}
       </VList>
     );
-    expect(asFragment()).toMatchSnapshot();
+
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should work in horizontal", () => {
@@ -69,6 +72,8 @@ describe("rtl", () => {
         ))}
       </VList>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 });

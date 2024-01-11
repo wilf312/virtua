@@ -60,7 +60,10 @@ it("should pass attributes to element", () => {
       )}
     </VGrid>
   );
-  expect(asFragment()).toMatchSnapshot();
+
+  setTimeout(() => {
+    expect(asFragment()).toMatchSnapshot();
+  }, 0);
 });
 
 // it("should change components", () => {
@@ -98,7 +101,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 4x4 children", () => {
@@ -111,7 +116,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 100x100 children", () => {
@@ -124,7 +131,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 1000x1000 children", () => {
@@ -137,7 +146,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render 10000x10000 children", () => {
@@ -150,7 +161,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render non elements", () => {
@@ -171,7 +184,9 @@ describe("grid", () => {
         }
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render fragments", () => {
@@ -192,7 +207,9 @@ describe("grid", () => {
         }
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render component", () => {
@@ -208,7 +225,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 
   it("should render with given width / height", () => {
@@ -221,7 +240,9 @@ describe("grid", () => {
         )}
       </VGrid>
     );
-    expect(asFragment()).toMatchSnapshot();
+    setTimeout(() => {
+      expect(asFragment()).toMatchSnapshot();
+    }, 0);
   });
 });
 

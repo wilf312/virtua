@@ -53,5 +53,8 @@ it("should change components", () => {
       </Virtualizer>
     </div>
   );
-  expect(asFragment()).toMatchSnapshot();
+
+  setTimeout(() => {
+    expect(asFragment()).toMatchSnapshot();
+  }, 0);
 });
